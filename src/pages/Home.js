@@ -5,7 +5,7 @@ export default function Home() {
     <div>
       <h1>Home</h1>
       {/* create a link to the about page*/}
-        <a href="/about">About</a>
+        <a href="about">About</a>
     </div>
   );
 }
