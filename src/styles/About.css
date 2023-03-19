@@ -1,0 +1,52 @@
+/* write css for the about page which makes the image background
+    take up  */
+/* make the background images take up all their parent containers space */
+
+
+.body {
+    background-image: url(../assets/wallpaper.jpg);
+    background-color: black;
+    background-size: cover;
+    color: white;
+    font-size: 1.5rem;
+    margin: 0;
+    padding: 15px;
+}
+
+.about {
+    display: border-box;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 1000px;
+    color: white;
+    margin: 50px;
+    margin-top: 30px;
+    padding: 15px;
+}
+
+.about .overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h2 {
+    color: beige;
+    font-size: 3rem;
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+}
+
+.about p {
+    color: white;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 0;
+    padding-top: 0;
+}
