@@ -4,8 +4,7 @@ export default function Home() {
   return (
     <div>
       <h1>Home</h1>
-      {/* add a link to the about page  not using the Link component*/}
-        <a href="#/about">About</a>
+      {/* <Link to="/about">About</Link> */}
     </div>
   );
 }
