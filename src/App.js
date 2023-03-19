@@ -4,6 +4,8 @@ import About from './pages/About';
 import {Layout, Main} from './components/styles.js';
 import Navbar from './components/Navbar';
 
+import { AnimatePresence } from 'framer-motion';
+
 
 export default function RouteSwitcher() {
   return (
@@ -11,13 +13,15 @@ export default function RouteSwitcher() {
     <HashRouter basename="/">
       <Navbar cartSize={0}/>
         <Main>
+        <AnimatePresence>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
+          <Route path="about" element={<About />} />
           {/* <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/NotFound" element={<NotFound />} /> */}
         </Routes>
+        </AnimatePresence>
       </Main>
     </HashRouter>
     </Layout>
