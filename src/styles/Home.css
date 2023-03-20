@@ -7,6 +7,20 @@
     padding: 20px;
 }
 
-.hero-overlay{
-    opacity: 1 !important;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-align: center;
+}
+
+.browse {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
 }

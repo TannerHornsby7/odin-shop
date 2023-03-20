@@ -14,7 +14,9 @@
     cursor: pointer;
     align-items: center;
     opacity: 1;
+    text-align: center;
 }
+
 .card p{
     font-size: 1.2rem;
     font-weight: 500;

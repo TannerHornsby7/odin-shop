@@ -3,6 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "../styles/Home.css";
 import { Link } from "react-router-dom";
 import Card from "../components/Card";
+import CarouselComponent from "../components/Carousel";
 
 export default function Home() {
   return (
@@ -22,36 +23,13 @@ export default function Home() {
           ></Card>
         </div>
       </div>
+      <div className="browse">
+        <h4>Browse our catalog</h4>
+        <CarouselComponent></CarouselComponent>
+        <Link to="/catalog" className="btn btn-secondary">
+          Explore Our Chest!
+        </Link>
+      </div>
     </div>
   );
 }
-/*
-
-<p>
-            The best-selling Minecraft item of all time! This item is a
-            must-have for any Minecraft player. It's the perfect gift for any
-            occasion.
-          </p>
-          <Link to="/catalog" className="btn btn-primary">
-            Shop Now
-          </Link>
-
-
-<img
-        src="https://images-na.ssl-images-amazon.com/images/I/81j%2B9I9N8qL._AC_SL1500_.jpg"
-        alt="diamond pickaxe"
-        className="card-img-top"
-    />
-    <div className="card-body">
-        <h5 className="card-title">Diamond Sword</h5>
-        <p className="card-text">
-        The best-selling Minecraft item of all time! This item is a
-        must-have for any Minecraft player. It's the perfect gift for
-        any occasion.
-        </p>
-        <Link to="/cart" className="btn btn-primary">
-        Add to Cart
-        </Link>
-    </div>
-
-    */
