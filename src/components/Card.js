@@ -1,7 +1,7 @@
 // create basic item card for catalog
 // import bootstrap classes
 import "bootstrap/dist/css/bootstrap.min.css";
-import "../styles/Catalog.css";
+import "../styles/Card.css";
 
 export default function Card(props) {
   return (
