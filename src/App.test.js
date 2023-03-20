@@ -64,3 +64,16 @@ test("catalog page renders correctly", () => {
     // check if the catalog page is rendered
     expect(screen.getByText("BANANA")).toBeTruthy();
     });
+
+
+// check that adding an item to the cart works
+test("add item to cart", () => {
+    // render the app component
+    render(<App />);
+    act(()=>{
+        userEvent.click(screen.getByText("Add to Cart"));
+    });
+    // check if the cart page is rendered
+    expect(screen.getByText("Cart").length).toBe(1);
+    }
+);
