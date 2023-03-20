@@ -3,12 +3,16 @@ import Home from './pages/Home';
 import About from './pages/About';
 import {Layout, Main} from './components/styles.js';
 import Navbar from './components/Navbar';
+import Catalog from './pages/Catalog';
+import Cart from './pages/Cart';
+import NotFound from './pages/NotFound';
 
 import { AnimatePresence } from 'framer-motion';
 
 
-export default function RouteSwitcher() {
-  return (
+export default function App() {
+  return ( // add context provider here
+  
     <Layout>
     <HashRouter basename="/">
       <Navbar cartSize={0}/>
@@ -17,9 +21,9 @@ export default function RouteSwitcher() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="about" element={<About />} />
-          {/* <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/cart" element={<Cart />} />
-          <Route path="/NotFound" element={<NotFound />} /> */}
+          <Route path="catalog" element={<Catalog />} />
+          <Route path="cart" element={<Cart />} />
+          <Route path="/NotFound" element={<NotFound />} />
         </Routes>
         </AnimatePresence>
       </Main>

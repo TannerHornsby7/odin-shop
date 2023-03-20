@@ -1,7 +1,11 @@
 @font-face {
     font-family: "Minecraft";
     src: url("./assets/minecraft-ten-font/MinecraftTen-VGORe.ttf") format("truetype"),
-    }
+}
+
+*{
+  font-family: Minecraft !important;
+}
 
 body {
   margin: 0;

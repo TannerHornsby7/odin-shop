@@ -24,6 +24,9 @@ export default function About() {
             your Minecraft adventure. So come and visit my shop, and let's start
             trading!
           </p>
+          <p id="tagline">
+            - The Village Trader
+          </p>
         </div>
       </div>
     </div>
