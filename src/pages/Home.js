@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import Card from "../components/Card";
 import CarouselComponent from "../components/Carousel";
 
-export default function Home() {
+export default function Home(props) {
   return (
     <div className="body">
       <h2>Home</h2>
@@ -17,9 +17,7 @@ export default function Home() {
             link="https://assets.stickpng.com/images/580b57fcd9996e24bc43c301.png"
             alt="diamond pickaxe"
             description="The best-selling Minecraft item of all time! This item is a must-have for any Minecraft player. It is the perfect gift for any occasion."
-            addCardItem={() => {
-              alert("Added to cart!");
-            }}
+            addCardItem={props.addCardItem}
           ></Card>
         </div>
       </div>

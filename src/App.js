@@ -42,11 +42,11 @@ export default function App() {
         <Main>
         <AnimatePresence>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home addToCart={addToCart} />} />
           <Route path="about" element={<About />} />
           <Route path="catalog" element={<Catalog />} />
           <Route path="cart" element={<Cart />} />
-          <Route path="/NotFound" element={<NotFound />} />
+          {/* <Route path="/NotFound" element={<NotFound />} /> */}
         </Routes>
         </AnimatePresence>
       </Main>

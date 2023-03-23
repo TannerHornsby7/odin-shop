@@ -43,10 +43,9 @@ test("shop now button navigates on click", () => {
     // render the app component
     render(<App />);
     // check if the home page is rendered
-    expect(screen.getByText("Shop Now")).toBeTruthy();
     // click the shop now button
     act(()=>{
-        userEvent.click(screen.getByText("Shop Now"));
+        userEvent.click(screen.getByText("Explore Our Chest!"));
     });
     // check if the catalog page is rendered
     expect(screen.getByText("BANANA")).toBeTruthy();
@@ -74,6 +73,7 @@ test("add item to cart", () => {
         userEvent.click(screen.getByText("Add to Cart"));
     });
     // check if the cart page is rendered
+    console.log(screen.getByText("Cart"));
     expect(screen.getByText("Cart").length).toBe(1);
     }
 );
