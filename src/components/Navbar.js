@@ -7,7 +7,7 @@ import "../styles/Navbar.css";
 import craft_logo from "../assets/craft_logo.jpeg";
 import { Link } from "react-router-dom";
 
-export default function Navbar() {
+export default function Navbar(props) {
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
       <div className="container-fluid">
@@ -58,6 +58,9 @@ export default function Navbar() {
                 className="navbar-links nav-link"
               >
                 CART
+                <div id="cartcout">
+                  <span className="badge bg-secondary">{props.cartSize}</span>
+                </div>
               </Link>
             </li>
           </ul>
