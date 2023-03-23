@@ -8,7 +8,8 @@ export const items = [
         alt: "wooden sword",
         description: "",
         price: 1,
-        quantity: 16
+        aquantity: 16,
+        cquantity: 0
     },
     {
         name: "Stone Sword",
@@ -16,6 +17,16 @@ export const items = [
         alt: "stone sword",
         description: "",
         price: 2,
-        quantity: 8
-    }
+        aquantity: 8,
+        cquantity: 0
+    },
+    {
+        name: "Iron Sword",
+        link: links["iron sword"],
+        alt: "iron sword",
+        description: "",
+        price: 3,
+        aquantity: 4,
+        cquantity: 0
+    },
 ];

@@ -15,6 +15,7 @@ beforeEach(() => {
     container = document.createElement("div");
     document.body.appendChild(container);
 });
+
 afterEach(() => {
     // cleanup on exiting
     unmountComponentAtNode(container);
@@ -39,41 +40,60 @@ test("renders featured item", () => {
   expect(screen.getByText("Featured Item")).toBeTruthy();
 });
 
-test("shop now button navigates on click", () => {
-    // render the app component
-    render(<App />);
-    // check if the home page is rendered
-    // click the shop now button
-    act(()=>{
-        userEvent.click(screen.getByText("Explore Our Chest!"));
-    });
-    // check if the catalog page is rendered
-    expect(screen.getByText("BANANA")).toBeTruthy();
-});
-
-
 /* Lines 20 - * are testing the Catalog page */
 
 // check that the catalog page renders correctly
 // by simulating navigation to the page and 
 // checking that the page renders correctly
-test("catalog page renders correctly", () => {
-    // render the app component
-    render(<Catalog />);
-    // check if the catalog page is rendered
-    expect(screen.getByText("BANANA")).toBeTruthy();
-    });
-
-
-// check that adding an item to the cart works
-test("add item to cart", () => {
+test("renders catalog page", () => {
     // render the app component
     render(<App />);
+    // navigate to the catalog page
     act(()=>{
-        userEvent.click(screen.getByText("Add to Cart"));
+        userEvent.click(screen.getByText("HOME"));
     });
-    // check if the cart page is rendered
-    console.log(screen.getByText("Cart"));
-    expect(screen.getByText("Cart").length).toBe(1);
+    // check if the catalog page is rendered
+    act(()=>{
+        userEvent.click(screen.getByText("Explore Our Chest!"));
     }
-);
+    );
+    // check if the catalog page is rendered
+    expect(screen.getByText("Back to Home")).toBeTruthy();
+});
+
+// check that adding an item to the cart increments the cartcount div
+// in the navbar
+test("adding an item to the cart increments the cartcount div", () => {
+    // render the app
+    render(<App />);
+    // navigate to home page 
+    act(()=>{
+        userEvent.click(screen.getByText("HOME"));
+    });
+
+    act(()=>{
+        userEvent.click(screen.getAllByText("Add to Cart")[0]);
+    });
+    // check if the cartcount div is rendered
+    expect(screen.getByText("1")).toBeTruthy();
+});
+
+// check that incrementing the cartcount div works for multiple items
+test("adding multiple items to the cart increments the cartcount div", () => {
+    // render the app
+    render(<App />);
+    // navigate to home page 
+    act(()=>{
+        userEvent.click(screen.getByText("HOME"));
+    });
+
+    act(()=>{
+        userEvent.click(screen.getAllByText("Add to Cart")[0]);
+    });
+
+    act(()=>{
+        userEvent.click(screen.getAllByText("Add to Cart")[1]);
+    });
+    // check if the cartcount div is rendered
+    expect(screen.getByText("2")).toBeTruthy();
+});

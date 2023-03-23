@@ -2,11 +2,10 @@
 import { Link } from "react-router-dom";
 import Card from "../components/Card";
 import { useState, useEffect } from "react";
-import { useCart } from "../contexts/CartContext";
 
 export default function Cart(props) {
     // get cart from context
-    const { cart } = useCart();
+    const cart = props.cart;
     // create a state variable to store the total price
     const [totalPrice, setTotalPrice] = useState(0);
     // create a function to calculate the total price
