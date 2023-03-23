@@ -1,7 +1,8 @@
 // create a cart component that displays an array of cards from its props
 import { Link } from "react-router-dom";
-import Card from "../components/Card";
+import CheckCard from "../components/CheckCard";
 import { useState, useEffect } from "react";
+import "../styles/Cart.css";
 
 export default function Cart(props) {
     // get cart from context
@@ -28,19 +29,14 @@ export default function Cart(props) {
         <h2>Cart</h2>
         <div className="cart">
             {cart.map((item) => (
-            <Card
-                name={item.name}
-                link={item.link}
-                alt={item.alt}
-                description={item.description}
-                price={item.price}
-                quantity={item.quantity}
+            <CheckCard
+                item={item}
                 addCardItem={props.addCardItem}
-            ></Card>
+            ></CheckCard>
             ))}
         </div>
         <div className="total-price">
-            <h4>Total Price: ${totalPrice}</h4>
+            <h4>Total Price: {parseInt(totalPrice)}</h4>
         </div>
         <Link to="/checkout" className="btn btn-secondary">
             Checkout

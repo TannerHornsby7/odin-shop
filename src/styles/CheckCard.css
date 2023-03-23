@@ -1,0 +1,36 @@
+.checkcard{
+    width: 75%;
+    height: 75px;
+    background-color: #fff;
+    color: black;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.4);
+    display: grid;
+    grid-template-columns: 2fr 3fr 2fr 8fr 2fr 5fr;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+    align-items: center;
+    padding: 5px;
+}
+
+.checkcard p{
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.checkcard button {
+    justify-self: center;
+    align-self: center;
+}
+
+.checkcard img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.checkcard h5 {
+    align-self: center;
+    justify-self: center;
+}

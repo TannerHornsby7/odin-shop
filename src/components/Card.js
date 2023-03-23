@@ -25,27 +25,3 @@ export default function Card(props) {
     </div>
   );
 }
-
-/*
-
-Example:
-
-<div className="card">
-    <img
-        src="https://images-na.ssl-images-amazon.com/images/I/81j%2B9I9N8qL._AC_SL1500_.jpg"
-        alt="diamond pickaxe"
-        className="card-img-top"
-    />
-    <div className="card-body">
-        <h5 className="card-title">Diamond Pickaxe</h5>
-        <p className="card-text">
-        The best-selling Minecraft item of all time! This item is a
-        must-have for any Minecraft player. It's the perfect gift for
-        any occasion.
-        </p>
-        <Link to="/cart" className="btn btn-primary">
-        Add to Cart
-        </Link>
-    </div>
-</div>
-*/
