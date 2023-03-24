@@ -15,7 +15,6 @@ export default function Card(props) {
       {price}</h5>
       <img src={link} alt={alt} className="card-img-top" />
       <h5 className="card-title">{name}</h5>
-      <p className="card-text">{description}</p>
       <h5 className="card-title">Quantity: {cquantity}</h5>
         <button className="btn btn-tertiary deletebtn">
           <img alt='delete' src={dele} className='delete'></img>
