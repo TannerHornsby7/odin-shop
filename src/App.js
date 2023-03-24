@@ -57,6 +57,38 @@ export default function App() {
     setCart(cart.filter((item) => item !== itemToRemove));
   };
 
+  // increment item quantity in cart
+  const addCardItem = (item) => {
+    if (item.cquantity >= item.aquantity) {
+      alert("You can't buy more than " + item.aquantity + " " + item.name);
+      return;
+    }
+    setCart(
+      cart.map((cartItem) =>
+        cartItem.name === item.name
+          ? { ...cartItem, cquantity: cartItem.cquantity + 1 }
+          : cartItem
+      )
+    );
+  };
+
+  // decrement item quantity in cart
+  const removeCardItem = (item) => {
+    if (item.cquantity == 1) {
+      removeFromCart(item);
+      return;
+    }
+    setCart(
+      cart.map((cartItem) =>
+        cartItem.name === item.name
+          ? { ...cartItem, cquantity: cartItem.cquantity - 1 }
+          : cartItem
+      )
+    );
+  };
+
+
+
   return (
     // add context provider here
 
@@ -71,7 +103,7 @@ export default function App() {
               <Route path="catalog" element={<Catalog addToCart={addToCart} />} />
               <Route
                 path="cart"
-                element={<Cart cart={cart} removeFromCart={removeFromCart} />}
+                element={<Cart add={addCardItem} remove={removeCardItem} cart={cart} removeFromCart={removeFromCart} />}
               />
               <Route path="*" element={<NotFound />} />
             </Routes>

@@ -59,3 +59,9 @@
     background-color: black;
     color: white;
 }
+
+.checkcard .q-mod{
+    height: 50px;
+    display: flex;
+    gap: 5px;
+}

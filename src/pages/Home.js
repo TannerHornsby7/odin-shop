@@ -13,7 +13,7 @@ export default function Home(props) {
       <div className="hero">
         <div className="hero-overlay">
           <h4>Featured Item</h4>
-          <Card item={items[0]} addToCart={props.addToCart}></Card>
+          <Card item={items[Math.floor(Math.random() * items.length)]} addToCart={props.addToCart}></Card>
         </div>
       </div>
       <div className="browse">

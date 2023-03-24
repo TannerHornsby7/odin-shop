@@ -30,3 +30,8 @@
     object-fit: cover;
     border-radius: 10px;
 }
+
+.cost img{
+    height: 30px;
+    width: 30px;
+}

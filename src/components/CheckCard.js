@@ -15,10 +15,16 @@ export default function Card(props) {
       {price}</h5>
       <img src={link} alt={alt} className="card-img-top" />
       <h5 className="card-title">{name}</h5>
-      <h5 className="card-title">Quantity: {cquantity}</h5>
-        <button className="btn btn-tertiary deletebtn">
-          <img alt='delete' src={dele} className='delete'></img>
+      <p className="card-text"> </p>
+      <div className="q-mod">
+        <button onClick={() => props.add(props.item)} className="btn btn-secondary">
+          +
         </button>
+        <h5 className="card-title">{cquantity}</h5>
+        <button onClick={() => props.remove(props.item)} className="btn btn-secondary">
+          -
+        </button>
+      </div>
     </div>
   );
 }

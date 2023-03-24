@@ -33,15 +33,17 @@ export default function Cart(props) {
             <CheckCard
                 item={item}
                 addCardItem={props.addCardItem}
+                add={props.add}
+                remove={props.remove}
             ></CheckCard>
             ))}
         </div>
         <div className="total-price">
             <h4>Total Price: <img alt='emerald' src={emerald}></img>{parseInt(totalPrice)}</h4>
-        </div>
-        <Link to="/checkout" className="btn btn-secondary">
+            <Link to="/checkout" className="checkbtn btn btn-secondary">
             Checkout
-        </Link>
+            </Link>
+        </div>
         </div>
     );
     }

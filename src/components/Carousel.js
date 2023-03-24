@@ -11,7 +11,7 @@ export default function CarouselComponent(props) {
   return (
     <Carousel className="carousel">
       <Carousel.Item>
-        <Card item={items[0]} addToCart={props.addToCart}></Card>
+        <Card item={items[Math.floor(Math.random() * items.length)]} addToCart={props.addToCart}></Card>
       </Carousel.Item>
       <Carousel.Item>
         <Card item={items[1]} addToCart={props.addToCart}></Card>

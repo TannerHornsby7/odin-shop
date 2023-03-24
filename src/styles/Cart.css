@@ -11,6 +11,8 @@
 
 .total-price{
     margin-top: 5px;
+    display: grid;
+    place-items: center;
 }
 
 img {
