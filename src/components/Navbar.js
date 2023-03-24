@@ -11,17 +11,15 @@ import { Container, Navbar, Nav } from "react-bootstrap";
 
 export default function NavbarComponent(props) {
   return (
-    <Navbar collapseOnSelect expand="lg" bg="black" variant="dark">
+    <Navbar collapseOnSelect expand="md" bg="black" variant="dark">
       <Container className="navy">
-        <div className="titlecard">
+        <Navbar.Brand className="titlecard me-auto">
           <img alt="craftstore" src={craft_logo}></img>
-            <Navbar.Brand className="title">
-              <Link className='navbar-links navbar-brand' to="/">CRAFTSTORE</Link>
-            </Navbar.Brand>
-        </div>
+          <Link className='navbar-links navbar-brand' to="/">CRAFTSTORE</Link>
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" bg="black"/>
-        <Navbar.Collapse id="responsive-navbar-nav" bg="black">
-          <Nav className="linkies">
+        <Navbar.Collapse id="responsive-navbar-nav" bg="black" className="ms-auto">
+          <Nav className="linkies ms-auto">
             <Link className="navbar-links" to="/about">
               {" "}
               ABOUT
