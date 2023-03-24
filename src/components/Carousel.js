@@ -8,16 +8,21 @@ import Card from "../components/Card";
 import { items } from "../items";
 
 export default function CarouselComponent(props) {
+  let indices = Array.from(Array(items.length).keys());
+  let x = indices.pop(Math.floor(Math.random() * indices.length));
+  let y = indices.pop(Math.floor(Math.random() * indices.length));
+  let z = indices.pop(Math.floor(Math.random() * indices.length));
+
   return (
     <Carousel className="carousel">
       <Carousel.Item>
-        <Card item={items[Math.floor(Math.random() * items.length)]} addToCart={props.addToCart}></Card>
+        <Card item={items[x]} addToCart={props.addToCart}></Card>
       </Carousel.Item>
       <Carousel.Item>
-        <Card item={items[1]} addToCart={props.addToCart}></Card>
+        <Card item={items[y]} addToCart={props.addToCart}></Card>
       </Carousel.Item>
       <Carousel.Item>
-      <Card item={items[2]} addToCart={props.addToCart}></Card>
+      <Card item={items[z]} addToCart={props.addToCart}></Card>
       </Carousel.Item>
     </Carousel>
   );
