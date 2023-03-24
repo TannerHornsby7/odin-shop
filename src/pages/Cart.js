@@ -2,6 +2,7 @@
 import { Link } from "react-router-dom";
 import CheckCard from "../components/CheckCard";
 import { useState, useEffect } from "react";
+import emerald from "../assets/emerald.png";
 import "../styles/Cart.css";
 
 export default function Cart(props) {
@@ -15,7 +16,7 @@ export default function Cart(props) {
         let total = 0;
         // loop through the cart and add the price of each item to the total
         cart.forEach((item) => {
-        total += item.price * item.quantity;
+        total += item.price * item.cquantity;
         });
         // update the total price state variable
         setTotalPrice(total);
@@ -36,7 +37,7 @@ export default function Cart(props) {
             ))}
         </div>
         <div className="total-price">
-            <h4>Total Price: {parseInt(totalPrice)}</h4>
+            <h4>Total Price: <img alt='emerald' src={emerald}></img>{parseInt(totalPrice)}</h4>
         </div>
         <Link to="/checkout" className="btn btn-secondary">
             Checkout

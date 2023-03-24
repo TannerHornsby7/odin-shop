@@ -13,6 +13,8 @@
     padding: 5px;
 }
 
+
+
 .checkcard p{
     font-size: 1.2rem;
     font-weight: 500;
@@ -30,7 +32,30 @@
     border-radius: 10px;
 }
 
+.checkcard .emerald{
+    height: 40px;
+    width: 40px;
+} 
+
+.checkcard .delete{
+    height: 30px;
+    width: 30px;
+}
+
 .checkcard h5 {
     align-self: center;
     justify-self: center;
+}
+
+.checkcard .deletebtn{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 15%;
+    padding-right: 15%;
+    border: 3px solid black;
+}
+
+.checkcard .deletebtn:hover{
+    background-color: black;
+    color: white;
 }

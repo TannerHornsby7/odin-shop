@@ -1,39 +1,73 @@
-nav {
+.navy {
+    margin: 0;
+    padding: 10px;
+    width: 100%;
     height: 75px;
     background-color: black;
     color: white;
-    display: grid;;
-    grid-template-columns: 1fr 10fr 1fr 1fr 1fr 1fr;
-    align-items: center;
-    font-family: Minecraft;
+    display: flex;
+    justify-content: space-between;
 }
 
 nav img{
     height: 50px;
 }
 
-nav h1{
-    text-align: center;
-    margin: 0;
-    margin-top: 5px;
-    padding: 0;
+.title{
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.titlecard{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 350px;
+}
+
+.directory{
+    margin-left: 5px;
+}
+
+.navy .linkies{
+    grid-column: 3 / 4;
+    align-self: end;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
 .navbar-links {
     color: white;
     text-decoration: none;
-    height: 100%;
+    height: 75px;
     width: 100%;
     display: grid;
     place-items: center;
+    font-size: 20px;
+    padding: 10px;
 }
 
 .navbar-links:hover {
+    background-color: #fff;
     color: black;
-    background-color: white;
 }
 
-.navbar-links:active {
-    color: green;
-    background-color: white;
+div .cartdiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    height: 100%;
+}
+
+.navbar-collapse {
+    z-index: 9999; /* or any higher value than the z-index of the content below it */
+    background-color: black;  
+
+}
+
+.navbar-brand{
+    font-size: 40px;
 }

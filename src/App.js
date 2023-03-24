@@ -11,6 +11,7 @@ import { items } from "./items";
 import { useState, createContext, useEffect } from "react";
 
 import { AnimatePresence } from "framer-motion";
+import NavbarComponent from "./components/Navbar";
 
 export default function App() {
   const [cart, setCart] = useState([]);
@@ -61,7 +62,7 @@ export default function App() {
 
     <Layout>
       <HashRouter basename="/">
-        <Navbar cartSize={cartAmount} />
+        <NavbarComponent cartSize={cartAmount} />
         <Main>
           <AnimatePresence>
             <Routes>
